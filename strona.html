@@ -1,0 +1,414 @@
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MANI ROOM Julia Płachta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+    --beige:#d8d2c8;
+    --cream:#f5f1eb;
+    --black:#111111;
+    --gold:#b49b72;
+    --gray:#666;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--cream);
+    color:var(--black);
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(245,241,235,0.96);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.navbar{
+    max-width:1300px;
+    margin:auto;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:80px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--black);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(245,241,235,.75),rgba(245,241,235,.75)),
+    url("https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=1600&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    padding:120px 20px;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.btn{
+    background:var(--black);
+    color:white;
+    padding:16px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold);
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.5rem;
+    margin-bottom:60px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--beige);
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+/* PRICE LIST */
+
+.price-list{
+    max-width:1000px;
+    margin:auto;
+}
+
+.price-image{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact-info{
+    margin-top:30px;
+}
+
+.contact-info p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+.contact-info i{
+    width:30px;
+}
+
+.social{
+    margin-top:30px;
+}
+
+.social a{
+    color:var(--black);
+    font-size:2rem;
+    margin:0 15px;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:var(--gold);
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.section-title{
+    font-size:2.5rem;
+}
+
+.logo img{
+    height:60px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<div class="logo">
+<img src="logo.png" alt="MANI ROOM">
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Strona Główna</a></li>
+<li><a href="#oferta">Oferta</a></li>
+<li><a href="#cennik">Cennik</a></li>
+<li><a href="#onas">O nas</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+<li><a href="#kontakt">Umów wizytę</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>MANI ROOM</h1>
+
+<p>
+Profesjonalna stylizacja paznokci, elegancka atmosfera i indywidualne podejście do każdej klientki.
+</p>
+
+<a href="#kontakt" class="btn">
+UMÓW WIZYTĘ
+</a>
+
+</div>
+
+</section>
+
+<section id="oferta">
+
+<h2 class="section-title">Oferta</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Manicure Hybrydowy</h3>
+<p>Perfekcyjny wygląd paznokci nawet przez kilka tygodni.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Przedłużanie Paznokci</h3>
+<p>Naturalny efekt oraz idealny kształt dopasowany do dłoni.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Zdobienia Premium</h3>
+<p>French, Babyboomer, cyrkonie i wyjątkowe zdobienia artystyczne.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="onas">
+
+<h2 class="section-title">O nas</h2>
+
+<div class="about-content">
+
+<p>
+MANI ROOM Julia Płachta to miejsce stworzone z pasji do piękna i perfekcyjnej stylizacji paznokci.
+Dbamy o najwyższą jakość usług, komfort klientek oraz indywidualne podejście do każdej wizyty.
+Pracujemy na profesjonalnych produktach i stale rozwijamy swoje umiejętności, aby oferować
+najmodniejsze stylizacje oraz najwyższy poziom usług.
+</p>
+
+</div>
+
+</section>
+
+<section id="cennik">
+
+<h2 class="section-title">Cennik</h2>
+
+<div class="price-list">
+<img src="cennik.jpg" class="price-image" alt="Cennik MANI ROOM">
+</div>
+
+</section>
+
+<section class="contact" id="kontakt">
+
+<h2 class="section-title">Kontakt</h2>
+
+<div class="contact-info">
+
+<p><i class="fa-solid fa-phone"></i> 696 236 313</p>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47188b004aa69bb1:0x7c99dc6f442fe9ba?sa=X&ved=1t:8290&ictx=111"
+target="_blank">
+Zobacz lokalizację salonu
+</a>
+</p>
+
+</div>
+
+<div class="social">
+
+<a href="https://www.instagram.com/maniroom.juliaplachta/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61565517794496" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2025 MANI ROOM Julia Płachta</p>
+
+<p>
+<a href="#" style="color:white;">Polityka prywatności</a> |
+<a href="#" style="color:white;">Regulamin</a>
+</p>
+
+</footer>
+
+</body>
+</html>
+```
